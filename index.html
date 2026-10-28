@@ -1712,6 +1712,13 @@ footer { background: #171a12 !important; }
   .hero .photo img { filter: sepia(.06) saturate(.92) contrast(1.1) brightness(1.02) !important; }
 }
 @media (min-width: 761px) { nav:not(.solid) a, .hero .hero-label, .hero .hero-line { text-shadow: 0 1px 3px rgba(0,0,0,.65), 0 0 14px rgba(0,0,0,.45); } }
+/* phones: same header treatment as desktop (neutral dark overlay, nav fade, soft text shadows), a touch less bright */
+@media (max-width: 760px) {
+  .hero .photo img { filter: sepia(.06) saturate(.9) contrast(1.1) brightness(.8) !important; }
+  .hero .photo::after { background: linear-gradient(180deg, rgba(18,18,16,.5) 0, rgba(18,18,16,.2) 18%, rgba(18,18,16,.16) 40%, rgba(18,18,16,.6) 60%, rgba(18,18,16,.86) 100%) !important; }
+  nav:not(.solid) { background: linear-gradient(180deg, rgba(18,18,16,.5), rgba(18,18,16,0)) !important; }
+  nav:not(.solid) a, .hero .hero-label, .hero .hero-line { text-shadow: 0 1px 3px rgba(0,0,0,.65), 0 0 14px rgba(0,0,0,.45); }
+}
 </style>
 </head>
 <body>

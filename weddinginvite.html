@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ammaarah &amp; Nazier</title>
-<meta name="description" content="The wedding of Ammaarah Roshan and Nazier Ahmed Cassiem, Thursday 17 December 2026, Cavalli Estate, Somerset West. Kindly RSVP.">
+<meta name="description" content="The wedding of Ammaarah Roshan and Nazier Ahmed Cassiem, Thursday, December 17, 2026, Cavalli Estate, Somerset West. Kindly RSVP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=Amiri:wght@400;700&family=Lateef:wght@200;300&display=swap" rel="stylesheet">
 <style>
 /* ---------------------------------------------------------------
    FONTS
@@ -1720,6 +1720,64 @@ footer { background: #171a12 !important; }
   nav:not(.solid) a, .hero .hero-label, .hero .hero-line { text-shadow: 0 1px 3px rgba(0,0,0,.65), 0 0 14px rgba(0,0,0,.45); }
 }
 @media (max-width: 760px) { .hero .crest .hero-label:last-child { display: none !important; } }
+/* ===== latest copy pass ===== */
+.hero .bismillah { font-family: "Lateef", "Amiri", serif !important; font-weight: 300 !important; font-size: clamp(30px, 2.8vw, 40px) !important; line-height: 1.5 !important; color: rgba(246,241,232,.95) !important; }
+.cel-h.cel-h2 { margin-top: clamp(28px, 3vw, 42px) !important; }
+.cel-text .cel-link { display: inline-block; margin: 6px 0 4px; }
+.verse { background: var(--g-cream); text-align: center; padding: clamp(64px, 8vw, 110px) 24px clamp(40px, 5vw, 70px); }
+.verse-ar { font-family: "Lateef", "Amiri", serif; font-weight: 300; font-size: clamp(34px, 4vw, 52px); line-height: 1.6; color: #171a12; margin: 0 0 8px; }
+.verse-en { font-family: var(--blosta); font-size: clamp(30px, 3vw, 42px); line-height: 1.3; color: #171a12; margin: 0 0 14px; }
+.verse-ref { font-family: var(--jost); font-size: 11px; letter-spacing: .32em; padding-left: .32em; text-transform: uppercase; color: var(--g-sage); margin: 0; }
+.registry { margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(99,105,87,.3); text-align: center; }
+.registry[hidden] { display: none; }
+.reg-note { font-size: 13px !important; line-height: 1.7; margin: 0 0 18px; color: var(--g-sage); }
+.reg-btn { display: inline-block; font-family: var(--jost); font-size: 12px; letter-spacing: .26em; padding: 15px 28px; text-transform: uppercase; text-decoration: none; background: #171a12; color: #fbfaf6; }
+@media (max-width: 760px) { .hero .bismillah { font-size: 30px !important; } }
+/* footer content centred vertically in the dark band */
+footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !important; }
+@media (max-width: 760px) { footer { padding: 34px 16px 30px !important; } }
+/* thinnest Lateef weight for the Arabic lines */
+.hero .bismillah { font-weight: 200 !important; }
+.verse-ar { font-weight: 200 !important; }
+/* invitation names: more room so the swashes of the names and the ampersand never touch */
+#invite .inv-name { line-height: 1.7 !important; padding: 6px 0 !important; }
+#invite .inv-amp { font-size: 30px !important; line-height: 1 !important; margin: 30px 0 30px !important; }
+#invite .inv-parents { margin-top: 10px !important; }
+@media (max-width: 760px) { #invite .inv-amp { font-size: 24px !important; margin: 24px 0 24px !important; } }
+/* bismillah: hairline strokes like the printed card (no tight shadow that fattens the letters) */
+.hero .bismillah { font-weight: 200 !important; text-shadow: 0 0 14px rgba(0,0,0,.4) !important; filter: none !important; color: rgba(246,241,232,.92) !important; -webkit-font-smoothing: antialiased; }
+/* Nazier nudged left so the ampersand sits centred between the names */
+#invite .inv-amp + .inv-name { transform: translate(-5%, 8px); }
+/* parents lines tucked closer under each name */
+#invite .inv-name { padding-bottom: 0 !important; }
+#invite .inv-name + .inv-parents { margin-top: 0 !important; }
+#invite .inv-amp + .inv-name + .inv-parents { margin-top: 12px !important; }
+/* larger names so the parents lines sit in proportion */
+#invite .inv-name { font-size: clamp(30px, 2.8vw, 42px) !important; }
+@media (max-width: 760px) { #invite .inv-name { font-size: clamp(24px, 6.8vw, 30px) !important; } }
+/* captions: one line, spaced out to the exact width of the name above */
+#invite .inv-parents { display: block; white-space: nowrap; width: auto !important; max-width: none !important; margin-left: auto !important; margin-right: auto !important; text-align: center !important; line-height: 1.7 !important; text-wrap: nowrap; padding: 0 !important; }
+/* venue + dress code spacing */
+.cel-row.flip .cel-text > * { margin-left: auto; margin-right: auto; }
+.cel-row.flip h3.cel-h { margin: 0 0 12px !important; }
+.cel-row.flip .cel-link { display: inline-block; margin: 0 0 clamp(18px, 2vw, 26px) !important; }
+.cel-row.flip p.cel-sub { margin: 0 0 6px !important; line-height: 1.2 !important; }
+.cel-row.flip h3.cel-h.cel-h2 { margin: clamp(34px, 4vw, 52px) 0 12px !important; }
+.cel-row.flip p.cel-p { margin: 0 !important; line-height: 1.7 !important; }
+/* bigger venue / dress code headings, and a directions link that nothing overlaps */
+.cel-row.flip h3.cel-h { font-size: clamp(28px, 3vw, 42px) !important; letter-spacing: .2em !important; margin: 0 0 16px !important; }
+.cel-row.flip .cel-link { position: relative; z-index: 2; font-size: clamp(12px, 1vw, 14px) !important; letter-spacing: .26em !important; margin: 0 0 clamp(36px, 4vw, 54px) !important; padding-bottom: 4px; }
+.cel-row.flip p.cel-sub { position: relative; z-index: 1; line-height: 1.5 !important; padding-top: 10px; margin: 0 0 8px !important; }
+.cel-row.flip h3.cel-h.cel-h2 { margin: clamp(40px, 4.6vw, 62px) 0 16px !important; }
+/* verse: clearer, darker, easier to read */
+.verse-ar { font-weight: 400 !important; font-size: clamp(38px, 4.4vw, 58px) !important; color: #171a12 !important; }
+.verse-en { font-family: "Marcellus", "Times New Roman", serif !important; font-size: clamp(20px, 2vw, 28px) !important; letter-spacing: .14em; text-transform: uppercase; line-height: 1.5 !important; color: #171a12 !important; margin: 4px 0 18px !important; }
+.verse-ref { font-size: 12px !important; letter-spacing: .3em !important; color: #4f5543 !important; }
+.verse-ar { font-weight: 200 !important; font-size: clamp(42px, 4.8vw, 64px) !important; color: #000 !important; }
+.verse-ar { font-size: clamp(46px, 5.2vw, 70px) !important; }
+/* landscape photos in the portrait strip frames: keep the couple in view */
+.strip4 img[src$="strip-1.jpg"] { object-position: 36% 50%; }
+.strip4 img[src$="strip-5.jpg"] { object-position: 62% 50%; }
 </style>
 </head>
 <body>
@@ -1780,9 +1838,9 @@ footer { background: #171a12 !important; }
     <div class="lockup crest">
       <span class="seam-badge hero-badge reveal d1"><img src="monogram.png" alt="A N monogram"></span>
       <p class="hero-label date-plain reveal d2">Thursday</p>
-      <p class="hero-line big date-plain reveal d2">the seventeenth of December</p>
+      <p class="hero-line big date-plain reveal d2">December 17, 2026</p>
       <span class="hero-divider reveal d3" aria-hidden="true"></span>
-      <p class="hero-label reveal d3">Somerset West</p>
+      <p class="hero-label reveal d3">Cavalli Estate, Somerset West</p>
     </div>
   </div>
 </header>
@@ -1797,11 +1855,11 @@ footer { background: #171a12 !important; }
     <p class="invite-copy">To the wedding of</p>
     <span class="lux-rule" aria-hidden="true"></span>
     <div class="inv-names">
-      <div class="inv-name">Ammaarah Roshan</div>
-      <div class="inv-parents">Eldest daughter of Irfaan Roshan and Rihana Roshan</div>
+      <div class="inv-name">Ammaarah</div>
+      <div class="inv-parents">Eldest daughter of Irfaan and Rihana Roshan</div>
       <div class="inv-amp" aria-hidden="true">&amp;</div>
-      <div class="inv-name">Nazier Ahmed Cassiem</div>
-      <div class="inv-parents">Eldest son of Ashraf Cassiem and Rehana Cassiem</div>
+      <div class="inv-name">Nazier</div>
+      <div class="inv-parents">Eldest son of Ashraf and Rehana Cassiem</div>
     </div>
   </div>
 </section>
@@ -1828,7 +1886,7 @@ footer { background: #171a12 !important; }
   </div>
 
   <div class="cel-row">
-    <div class="cel-media left reveal"><span class="cel-block" aria-hidden="true"></span><div class="photo"><img src="photos/celebration-1.jpg" alt="Ammaarah and Nazier embracing"></div></div>
+    <div class="cel-media left reveal"><span class="cel-block" aria-hidden="true"></span><div class="photo"><img src="photos/celebration-2.jpg" alt="Ammaarah and Nazier"></div></div>
     <div class="cel-text reveal d1">
       <p class="cel-sub">The Day</p>
       <p class="cel-p">We would be honoured to have you with us as we begin our forever.</p>
@@ -1838,13 +1896,21 @@ footer { background: #171a12 !important; }
   <div class="cel-row flip">
     <div class="cel-text reveal">
       <h3 class="cel-h">Venue</h3>
-      <p class="cel-sub">Cavalli Estate</p>
-      <p class="cel-p">The Nikkah and the reception are both held at the estate.</p>
-      <p class="cel-p">Dress code: black tie formal &nbsp;|&nbsp; evening wear</p>
       <a class="cel-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cavalli+Estate+Somerset+West" target="_blank" rel="noopener">Directions</a>
+      <p class="cel-sub">Cavalli Estate</p>
+      <h3 class="cel-h cel-h2">Dress Code</h3>
+      <p class="cel-sub">Black Tie Formal</p>
+      <p class="cel-p">Evening wear</p>
     </div>
     <div class="cel-media right reveal d1"><span class="cel-block" aria-hidden="true"></span><div class="photo"><img src="photos/venue-1.jpg" alt="Ammaarah and Nazier under the lamppost"></div></div>
   </div>
+</section>
+
+<!-- VERSE: Surah An-Naba 78:8 -->
+<section class="verse" aria-label="Verse">
+  <p class="verse-ar" lang="ar" dir="rtl">وَخَلَقْنَاكُمْ أَزْوَاجًا</p>
+  <p class="verse-en">&ldquo;And We created you in pairs.&rdquo;</p>
+  <p class="verse-ref">Surah An-Naba &middot; 78:8</p>
 </section>
 
 <!-- PHOTO STRIP: swipe or use the arrows to move to the next set of four -->
@@ -1852,16 +1918,17 @@ footer { background: #171a12 !important; }
   <div class="strip4" id="strip4" tabindex="0">
     <div class="photo bw"><img src="photos/more-1.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo"><img src="photos/more-6.jpg" alt="" loading="lazy" draggable="false"></div>
-    <div class="photo bw"><img src="photos/more-8.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo"><img src="photos/gallery-2.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo bw"><img src="photos/more-2.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo"><img src="photos/more-3.jpg" alt="" loading="lazy" draggable="false"></div>
-    <div class="photo bw"><img src="photos/more-4.jpg" alt="" loading="lazy" draggable="false"></div>
-    <div class="photo"><img src="photos/more-5.jpg" alt="" loading="lazy" draggable="false"></div>
-    <div class="photo bw"><img src="photos/more-7.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo"><img src="photos/more-9.jpg" alt="" loading="lazy" draggable="false"></div>
-    <div class="photo bw"><img src="photos/more-10.jpg" alt="" loading="lazy" draggable="false"></div>
     <div class="photo"><img src="photos/gallery-1.jpg" alt="" loading="lazy" draggable="false"></div>
+  
+    <div class="photo"><img src="photos/strip-1.jpg" alt="" loading="lazy" draggable="false"></div>
+    <div class="photo bw"><img src="photos/strip-2.jpg" alt="" loading="lazy" draggable="false"></div>
+    <div class="photo"><img src="photos/strip-3.jpg" alt="" loading="lazy" draggable="false"></div>
+    <div class="photo bw"><img src="photos/strip-4.jpg" alt="" loading="lazy" draggable="false"></div>
+    <div class="photo"><img src="photos/strip-5.jpg" alt="" loading="lazy" draggable="false"></div>
   </div>
   <button class="strip-btn prev" type="button" aria-label="Previous photos"><svg viewBox="0 0 24 48" width="18" height="36" aria-hidden="true"><path d="M17 8 L6 24 L17 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <button class="strip-btn next" type="button" aria-label="Next photos"><svg viewBox="0 0 24 48" width="18" height="36" aria-hidden="true"><path d="M7 8 L18 24 L7 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -1870,14 +1937,13 @@ footer { background: #171a12 !important; }
 
 <!-- WEDDING DAY SCHEDULE: dark photo, centre line, events alternating either side -->
 <section class="sched" id="schedule">
-  <div class="edit-kicker reveal"><span class="n">03</span>The day</div>
   <div class="sched-bg photo" aria-hidden="true"><img src="photos/more-7.jpg" alt=""></div>
-  <h2 class="sched-title reveal">Wedding Day Schedule</h2>
+  <h2 class="sched-title reveal">Order of the Day</h2>
   <span class="lux-rule reveal d1" aria-hidden="true"></span>
   <div class="sched-timeline" id="timeline">
-    <div class="event reveal"><time>2:15 PM</time><h3>Arrival time</h3><p>Kindly arrive and be seated</p></div>
-    <div class="event reveal d1"><time>3 PM</time><h3>Nikkah</h3><p>The ceremony, among family &amp; friends</p></div>
-    <div class="event reveal d2"><time>4 PM</time><h3>Pre-reception</h3><p>Drinks and light bites in the garden</p></div>
+    <div class="event reveal"><time>2:15 PM &ndash; 2:45 PM</time><h3>Arrival time</h3><p>We invite you to be seated by 2:45 pm</p></div>
+    <div class="event reveal d1"><time>3 PM</time><h3>Nikkah</h3><p>The ceremony</p></div>
+    <div class="event reveal d2"><time>4 PM</time><h3>Pre-reception</h3><p>Drinks and light bites</p></div>
     <div class="event reveal d3"><time>5 PM</time><h3>Reception</h3><p>Dinner, speeches &amp; celebration</p></div>
   </div>
 </section>
@@ -1887,9 +1953,9 @@ footer { background: #171a12 !important; }
 <!-- RSVP: paper panel with form | olive panel with framed photo -->
 <section class="nr-split reverse" id="rsvp">
   <div class="nr-split-paper nr-rsvp">
-    <div class="edit-kicker"><span class="n">04</span>RSVP</div>
+    <div class="edit-kicker"><span class="n">03</span>RSVP</div>
     <h2 class="nr-caps">Kindly Reply</h2>
-    <p class="nr-small">By the fifteenth of November, 2026</p>
+    <p class="nr-small">By November 15, 2026</p>
 
     <!-- Replies are saved to the Google Form behind data-gform (and appear in its linked Sheet).
          If sending fails, the guest's email app opens with the reply pre-filled instead. -->
@@ -1916,12 +1982,19 @@ footer { background: #171a12 !important; }
     </div>
 
     <div class="wa-rsvp">
-      <p class="wa-lead">Kindly also reply on WhatsApp</p>
+      <p class="wa-lead">Alternatively, RSVP via WhatsApp</p>
       <div class="wa-list">
-        <a href="https://wa.me/27799274396?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on 17 December 2026." target="_blank" rel="noopener"><span>Ammaarah</span><b>079 927 4396</b></a>
-        <a href="https://wa.me/27766597846?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on 17 December 2026." target="_blank" rel="noopener"><span>Rihana, Ammaarah&rsquo;s mother</span><b>076 659 7846</b></a>
-        <a href="https://wa.me/27825776465?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on 17 December 2026." target="_blank" rel="noopener"><span>Rehana, Nazier&rsquo;s mother</span><b>082 577 6465</b></a>
+        <a href="https://wa.me/27799274396?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Ammaarah Roshan</span><b>079 927 4396</b></a>
+        <a href="https://wa.me/27766597846?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Rihana Roshan, Ammaarah&rsquo;s mother</span><b>076 659 7846</b></a>
+        <a href="https://wa.me/27825776465?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Rehana Cassiem, Nazier&rsquo;s mother</span><b>082 577 6465</b></a>
       </div>
+    </div>
+
+    <!-- Registry: set href to the Giftly link and remove the "hidden" attribute to show this block -->
+    <div class="registry" hidden>
+      <p class="wa-lead">Gift Registry</p>
+      <p class="reg-note">Should you wish to give a gift, our registry is on Giftly.</p>
+      <a class="reg-btn" href="#" target="_blank" rel="noopener">View our registry</a>
     </div>
   </div>
   <div class="rsvp-photo photo"><img src="photos/more-4.jpg" alt="Ammaarah and Nazier under the lamppost"></div>
@@ -1932,7 +2005,7 @@ footer { background: #171a12 !important; }
   <p class="foot-love">With love,</p>
   <p class="script display">Ammaarah &amp; Nazier</p>
   <span class="lux-rule" aria-hidden="true"></span>
-  <p class="caps">17 · 12 · 2026</p>
+  <p class="caps">December 17, 2026</p>
 </footer>
 
 <script>
@@ -2117,6 +2190,33 @@ document.querySelectorAll('.ed-sub, .ed-script').forEach(el => io.observe(el));
   track.addEventListener('scroll', sync, { passive: true });
   track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
   addEventListener('resize', build); build();
+})();
+</script>
+<script>
+/* one-line captions exactly as wide as their names: names scale up if a caption can't fit, then each caption's letter-spacing is solved to match */
+(function () {
+  var names = [].slice.call(document.querySelectorAll('#invite .inv-name'));
+  if (!names.length) return;
+  function width(el) { var r = document.createRange(); r.selectNodeContents(el); return r.getBoundingClientRect().width; }
+  function fit() {
+    var fs = innerWidth <= 760 ? 8.5 : 9.5;
+    var pairs = names.map(function (n) { return { n: n, p: n.nextElementSibling }; }).filter(function (x) { return x.p && x.p.classList.contains('inv-parents'); });
+    pairs.forEach(function (x) { x.n.style.fontSize = ''; x.p.style.fontSize = fs + 'px'; x.p.style.letterSpacing = '0em'; });
+    var base = parseFloat(getComputedStyle(names[0]).fontSize), k = 1;
+    pairs.forEach(function (x) { var w = width(x.n); if (w) k = Math.max(k, width(x.p) / w); });
+    k = Math.min(k, 1.25);
+    pairs.forEach(function (x) { x.n.style.setProperty('font-size', (base * k) + 'px', 'important'); });
+    pairs.forEach(function (x) {
+      var target = width(x.n), chars = x.p.textContent.length - 1, lo = 0, hi = 0.45;
+      if (!target || chars < 1) return;
+      for (var i = 0; i < 14; i++) { var mid = (lo + hi) / 2; x.p.style.letterSpacing = mid + 'em'; if (width(x.p) > target) hi = mid; else lo = mid; }
+      x.p.style.letterSpacing = lo + 'em';
+    });
+  }
+  function run() { fit(); }
+  window.addEventListener('load', run); window.addEventListener('resize', run);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+  run();
 })();
 </script>
 </body>

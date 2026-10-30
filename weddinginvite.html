@@ -2041,10 +2041,10 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 
     <!-- Replies are saved to the Google Form behind data-gform (and appear in its linked Sheet).
          If sending fails, the guest's email app opens with the reply pre-filled instead. -->
-    <form id="rsvp-form" data-gform="https://docs.google.com/forms/d/e/1FAIpQLSfQu5HTE6d_NioMop0atSg9x6mqeEKIfWwXcDMcIPn5hqBXGA/formResponse" data-email="zayahnabrahams2004@gmail.com">
+    <form id="rsvp-form" autocomplete="off" data-gform="https://docs.google.com/forms/d/e/1FAIpQLSfQu5HTE6d_NioMop0atSg9x6mqeEKIfWwXcDMcIPn5hqBXGA/formResponse" data-email="zayahnabrahams2004@gmail.com">
       <div class="two">
-        <div class="field"><label for="first">First name</label><input id="first" name="entry.1035055887" data-label="First name" required autocomplete="given-name"></div>
-        <div class="field"><label for="surname">Surname</label><input id="surname" name="entry.1548000413" data-label="Surname" required autocomplete="family-name"></div>
+        <div class="field"><label for="first">First name</label><input id="first" name="entry.1035055887" data-label="First name" required autocomplete="off"></div>
+        <div class="field"><label for="surname">Surname</label><input id="surname" name="entry.1548000413" data-label="Surname" required autocomplete="off"></div>
       </div>
       <div class="choice">
         <input type="radio" name="entry.1135446806" data-label="Attending" id="yes" value="Joyfully accepts" required><label for="yes">Joyfully accepts</label>
@@ -2053,13 +2053,12 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
       <div class="two">
         <div class="field"><label for="guests">Number of guests</label>
           <select id="guests" name="entry.231481461" data-label="Number of guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
-        <div class="field"><label for="phone">Phone</label><input id="phone" name="entry.1337212066" data-label="Phone" type="tel" required autocomplete="tel"></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="entry.1337212066" data-label="Phone" type="tel" required autocomplete="off"></div>
       </div>
       <div class="field"><label for="note">A note for the couple</label><textarea id="note" name="entry.374926177" data-label="A note for the couple"></textarea></div>
       <button class="send nr-btn" type="submit">Send reply</button>
     </form>
     <div class="thanks" id="thanks">
-      <div data-monogram data-animate></div>
       <p>Thank you, your reply has been received.</p>
     </div>
 
@@ -2179,10 +2178,23 @@ form.addEventListener('submit', async e => {
       .map(el => `${el.dataset.label}: ${el.value}`).join('\n');
     location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent('RSVP - ' + who)}&body=${encodeURIComponent(body)}`;
   }
+  form.reset();
   form.style.display = 'none';
-  const th = document.getElementById('thanks'); th.classList.add('show'); stamp(th.querySelector('[data-monogram]'), true);
+  const th = document.getElementById('thanks'); th.classList.add('show');
   th.querySelector('p').textContent = sent ? `Thank you, ${first}. Your reply has been received.` : 'Your email app should now open with your reply. Please press send to complete your RSVP.';
 });
+
+// privacy: a fresh, empty form every time the page is shown (reload, back button, restored tab on a shared device)
+function freshRsvp() {
+  form.reset();
+  form.style.display = '';
+  const th = document.getElementById('thanks');
+  th.classList.remove('show');
+  th.querySelector('p').textContent = 'Thank you, your reply has been received.';
+  const b = form.querySelector('button.send'); b.disabled = false; b.textContent = 'Send reply';
+}
+freshRsvp();
+window.addEventListener('pageshow', freshRsvp);
 
 // detail tabs
 document.querySelectorAll('.ed-tabs [role=tab]').forEach(tab => tab.addEventListener('click', () => {

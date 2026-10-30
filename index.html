@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ammaarah &amp; Nazier</title>
-<meta name="description" content="The wedding of Ammaarah Roshan and Nazier Ahmed Cassiem, Thursday, December 17, 2026, Cavalli Estate, Somerset West. Kindly RSVP.">
+<meta name="description" content="The wedding of Ammaarah Roshan and Nazier Ahmed Cassiem, Thursday, 17 December 2026, Cavalli Estate, Somerset West. Kindly RSVP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=Amiri:wght@400;700&family=Lateef:wght@200;300&display=swap" rel="stylesheet">
@@ -1778,6 +1778,53 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 /* landscape photos in the portrait strip frames: keep the couple in view */
 .strip4 img[src$="strip-1.jpg"] { object-position: 36% 50%; }
 .strip4 img[src$="strip-5.jpg"] { object-position: 62% 50%; }
+/* Thursday in the details date, travel note between venue and dress code */
+.cel-day { text-wrap: balance; font-size: clamp(28px, 4.6vw, 66px) !important; }
+@media (max-width: 760px) { .cel-day { font-size: clamp(26px, 7.6vw, 34px) !important; } }
+.cel-row.flip .cel-note { font-family: var(--jost); font-size: clamp(12px, 1vw, 14px); letter-spacing: .26em; line-height: 1.9; text-transform: uppercase; color: var(--cel-green); max-width: 34ch; margin: clamp(10px, 1.2vw, 16px) auto clamp(8px, 1vw, 14px) !important; padding-left: .26em; }
+.cel-row.flip h3.cel-h.cel-h2 { margin-top: clamp(64px, 7vw, 100px) !important; }
+/* ===== latest notes ===== */
+.cel-row.flip .cel-addr { font-family: var(--jost); font-size: clamp(12px, 1vw, 14px); letter-spacing: .26em; line-height: 1.8; text-transform: uppercase; color: var(--cel-green); margin: 0 0 clamp(14px, 1.6vw, 22px) !important; padding-left: .26em; }
+/* RSVP label sits a touch higher above "Kindly Reply" */
+#rsvp .edit-kicker { transform: translateY(-12px); }
+/* ampersand in the header moves up between the two names */
+.hero .names-text .amp { position: relative; top: -1.1em; }
+/* panel 2: "To the wedding of" sits midway between "You're Invited" and the diamond line */
+#invite .invite-title { margin-bottom: clamp(20px, 2.2vw, 30px) !important; }
+#invite .lux-rule { margin-top: clamp(20px, 2.2vw, 30px) !important; }
+/* verse: equal space above (calligraphy N) and below (photo row) */
+.verse { padding: clamp(54px, 6vw, 90px) 24px clamp(54px, 6vw, 90px) !important; }
+/* gifts page, fine print */
+.gifts { background: var(--g-cream); color: #171a12; text-align: center; padding: clamp(80px, 9vw, 130px) 24px clamp(80px, 9vw, 120px); }
+.gifts .edit-kicker { color: #4f5543 !important; margin-bottom: 18px; }
+.gifts-title { font-family: var(--blosta); font-weight: 400; font-size: clamp(36px, 3.6vw, 50px); line-height: 1.2; margin: 0 0 24px; color: #171a12; }
+.gifts-copy { font-family: var(--jost); font-size: 11.5px; letter-spacing: .08em; line-height: 2; max-width: 500px; margin: 0 auto 34px; color: #3c4233; }
+.gifts-bankname { font-family: var(--jost); font-size: 11px; letter-spacing: .3em; padding-left: .3em; text-transform: uppercase; margin: 0 0 18px; color: #171a12; }
+.gifts-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 38px; max-width: 640px; margin: 0 auto; }
+.gifts-grid div { display: flex; flex-direction: column; gap: 5px; min-width: 150px; }
+.gifts-grid span { font-family: var(--jost); font-size: 9px; letter-spacing: .26em; padding-left: .26em; text-transform: uppercase; color: #636957; }
+.gifts-grid b { font-family: var(--jost); font-weight: 400; font-size: 11.5px; letter-spacing: .1em; color: #171a12; }
+@media (max-width: 760px) { .gifts-grid { flex-direction: column; align-items: center; } .gifts-copy { font-size: 11px; } }
+/* spacing fixes: gifts title clear of its label, dress code detail clear of its heading */
+.gifts .edit-kicker { margin-bottom: clamp(34px, 3.6vw, 48px) !important; }
+.gifts-title { line-height: 1.4; margin-bottom: 28px; }
+.cel-row.flip h3.cel-h.cel-h2 + p.cel-sub { padding-top: clamp(18px, 2vw, 28px) !important; margin-bottom: 14px !important; }
+/* the N swirl moves down into the verse band so its cut edge disappears behind the photo row; the verse sits a little higher */
+.cel::after { display: none !important; }
+.verse { position: relative; overflow: hidden; padding: clamp(40px, 4.4vw, 64px) 24px clamp(80px, 9vw, 130px) !important; }
+.verse > * { position: relative; z-index: 1; }
+.verse::after { content: ""; position: absolute; z-index: 0; right: 0; bottom: 0; width: clamp(150px, 26vw, 390px); aspect-ratio: 859 / 494; background: var(--g-sage); -webkit-mask: url("swirl-N.png") right bottom / contain no-repeat; mask: url("swirl-N.png") right bottom / contain no-repeat; pointer-events: none; }
+@media (max-width: 760px) { .verse::after { width: clamp(96px, 26vw, 130px); } .verse { padding-bottom: 96px !important; } }
+/* gifts: still understated, but larger and darker so it reads easily */
+.gifts-title { font-size: clamp(40px, 4vw, 56px); }
+.gifts-copy { font-size: 14.5px; letter-spacing: .04em; line-height: 1.95; max-width: 560px; color: #171a12; }
+.gifts-bankname { font-size: 13px; letter-spacing: .28em; margin-bottom: 22px; }
+.gifts-grid { gap: 26px 44px; max-width: 700px; }
+.gifts-grid div { min-width: 170px; gap: 7px; }
+.gifts-grid span { font-size: 11px; letter-spacing: .2em; color: #4f5543; }
+.gifts-grid b { font-size: 15px; letter-spacing: .06em; color: #171a12; }
+@media (max-width: 760px) { .gifts-copy { font-size: 14px; } .gifts-grid b { font-size: 15px; } }
+@media (max-width: 760px) { #rsvp .edit-kicker { transform: translate(-1.5%, -12px); } }
 </style>
 </head>
 <body>
@@ -1838,7 +1885,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
     <div class="lockup crest">
       <span class="seam-badge hero-badge reveal d1"><img src="monogram.png" alt="A N monogram"></span>
       <p class="hero-label date-plain reveal d2">Thursday</p>
-      <p class="hero-line big date-plain reveal d2">December 17, 2026</p>
+      <p class="hero-line big date-plain reveal d2">17 December 2026</p>
       <span class="hero-divider reveal d3" aria-hidden="true"></span>
       <p class="hero-label reveal d3">Cavalli Estate, Somerset West</p>
     </div>
@@ -1874,9 +1921,8 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   <svg class="cel-ribbon rb-mob" aria-hidden="true"><path class="rb rb-main" d="M200 140 C178 157 60 207 70 240 C80 273 165 322 260 340 C355 358 530 328 640 350 C750 372 893 418 920 470 C947 522 883 610 800 660 C717 710 535 737 420 770 C305 803 168 818 110 860 C52 902 38 975 70 1020 C102 1065 195 1093 300 1130 C405 1167 597 1195 700 1240 C803 1285 930 1347 920 1400 C910 1453 752 1538 640 1560 C528 1582 342 1515 250 1530 C158 1545 118 1607 90 1650 C62 1693 58 1748 80 1790 C102 1832 155 1873 220 1900 C285 1927 386 1944 470 1950 C554 1956 682 1937 724 1934"/><path class="rb rb-hair" transform="translate(6 4)" d="M200 140 C178 157 60 207 70 240 C80 273 165 322 260 340 C355 358 530 328 640 350 C750 372 893 418 920 470 C947 522 883 610 800 660 C717 710 535 737 420 770 C305 803 168 818 110 860 C52 902 38 975 70 1020 C102 1065 195 1093 300 1130 C405 1167 597 1195 700 1240 C803 1285 930 1347 920 1400 C910 1453 752 1538 640 1560 C528 1582 342 1515 250 1530 C158 1545 118 1607 90 1650 C62 1693 58 1748 80 1790 C102 1832 155 1873 220 1900 C285 1927 386 1944 470 1950 C554 1956 682 1937 724 1934"/></svg>
     <div class="cel-date">
     <div class="edit-kicker reveal"><span class="n">02</span>The celebration</div>
-    <h2 class="cel-day reveal d1">December 17, 2026</h2>
+    <h2 class="cel-day reveal d1">Thursday, 17 December 2026</h2>
     <span class="lux-rule reveal d1" aria-hidden="true"></span>
-    <p class="cel-place reveal d2">Cavalli Estate, Strand Road, Somerset West, 7129</p>
     <div class="countdown cel-count reveal d2" id="countdown" data-date="2026-12-17T15:00:00+02:00">
       <div><b data-u="d">00</b><span>Days</span></div>
       <div><b data-u="h">00</b><span>Hours</span></div>
@@ -1889,7 +1935,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
     <div class="cel-media left reveal"><span class="cel-block" aria-hidden="true"></span><div class="photo"><img src="photos/celebration-2.jpg" alt="Ammaarah and Nazier"></div></div>
     <div class="cel-text reveal d1">
       <p class="cel-sub">The Day</p>
-      <p class="cel-p">We would be honoured to have you with us as we begin our forever.</p>
+      <p class="cel-p">We would be honoured to have you with us as we begin our forever</p>
     </div>
   </div>
 
@@ -1898,8 +1944,10 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
       <h3 class="cel-h">Venue</h3>
       <a class="cel-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cavalli+Estate+Somerset+West" target="_blank" rel="noopener">Directions</a>
       <p class="cel-sub">Cavalli Estate</p>
+      <p class="cel-addr">Strand Road, Somerset West</p>
+      <p class="cel-note">All guests should consider one hour travel and arrival time for events to continue timeously</p>
       <h3 class="cel-h cel-h2">Dress Code</h3>
-      <p class="cel-sub">Black Tie Formal</p>
+      <p class="cel-sub">Black Tie Optional</p>
       <p class="cel-p">Evening wear</p>
     </div>
     <div class="cel-media right reveal d1"><span class="cel-block" aria-hidden="true"></span><div class="photo"><img src="photos/venue-1.jpg" alt="Ammaarah and Nazier under the lamppost"></div></div>
@@ -1943,7 +1991,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   <div class="sched-timeline" id="timeline">
     <div class="event reveal"><time>2:15 PM &ndash; 2:45 PM</time><h3>Arrival time</h3><p>We invite you to be seated by 2:45 pm</p></div>
     <div class="event reveal d1"><time>3 PM</time><h3>Nikkah</h3><p>The ceremony</p></div>
-    <div class="event reveal d2"><time>4 PM</time><h3>Pre-reception</h3><p>Drinks and light bites</p></div>
+    <div class="event reveal d2"><time>4 PM</time><h3>Canapé Hour</h3><p>Drinks and light bites</p></div>
     <div class="event reveal d3"><time>5 PM</time><h3>Reception</h3><p>Dinner, speeches &amp; celebration</p></div>
   </div>
 </section>
@@ -1955,7 +2003,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   <div class="nr-split-paper nr-rsvp">
     <div class="edit-kicker"><span class="n">03</span>RSVP</div>
     <h2 class="nr-caps">Kindly Reply</h2>
-    <p class="nr-small">By November 15, 2026</p>
+    <p class="nr-small">By 15 November 2026</p>
 
     <!-- Replies are saved to the Google Form behind data-gform (and appear in its linked Sheet).
          If sending fails, the guest's email app opens with the reply pre-filled instead. -->
@@ -1984,20 +2032,31 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
     <div class="wa-rsvp">
       <p class="wa-lead">Alternatively, RSVP via WhatsApp</p>
       <div class="wa-list">
-        <a href="https://wa.me/27799274396?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Ammaarah Roshan</span><b>079 927 4396</b></a>
-        <a href="https://wa.me/27766597846?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Rihana Roshan, Ammaarah&rsquo;s mother</span><b>076 659 7846</b></a>
-        <a href="https://wa.me/27825776465?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on December 17, 2026." target="_blank" rel="noopener"><span>Rehana Cassiem, Nazier&rsquo;s mother</span><b>082 577 6465</b></a>
+        <a href="https://wa.me/27799274396?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Ammaarah Roshan</span><b>079 927 4396</b></a>
+        <a href="https://wa.me/27766597846?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Rihana Roshan, mother of the bride</span><b>076 659 7846</b></a>
+        <a href="https://wa.me/27825776465?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Rehana Cassiem, mother of the groom</span><b>082 577 6465</b></a>
       </div>
     </div>
 
-    <!-- Registry: set href to the Giftly link and remove the "hidden" attribute to show this block -->
-    <div class="registry" hidden>
-      <p class="wa-lead">Gift Registry</p>
-      <p class="reg-note">Should you wish to give a gift, our registry is on Giftly.</p>
-      <a class="reg-btn" href="#" target="_blank" rel="noopener">View our registry</a>
-    </div>
   </div>
   <div class="rsvp-photo photo"><img src="photos/more-4.jpg" alt="Ammaarah and Nazier under the lamppost"></div>
+</section>
+
+<!-- GIFTS: a note on gifts, in fine print -->
+<section class="gifts" id="gifts">
+  <div class="edit-kicker"><span class="n">04</span>Gifts</div>
+  <h2 class="gifts-title">A Note on Gifts</h2>
+  <p class="gifts-copy">Your presence at our wedding is the greatest present of all. However, if you wish to bless us with a gift, a contribution towards our future together would be sincerely appreciated.</p>
+  <div class="gifts-bank">
+    <p class="gifts-bankname">Discovery Bank</p>
+    <div class="gifts-grid">
+      <div><span>Account Holder</span><b>Ammaarah Roshan</b></div>
+      <div><span>Account Type</span><b>Current Account</b></div>
+      <div><span>Branch Code</span><b>679000</b></div>
+      <div><span>BIC/SWIFT</span><b>DISCZAJJXXX</b></div>
+      <div><span>Account Number</span><b>12425811840</b></div>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -2005,7 +2064,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   <p class="foot-love">With love,</p>
   <p class="script display">Ammaarah &amp; Nazier</p>
   <span class="lux-rule" aria-hidden="true"></span>
-  <p class="caps">December 17, 2026</p>
+  <p class="caps">Thursday, 17 December 2026</p>
 </footer>
 
 <script>

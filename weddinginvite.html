@@ -1825,6 +1825,39 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 .gifts-grid b { font-size: 15px; letter-spacing: .06em; color: #171a12; }
 @media (max-width: 760px) { .gifts-copy { font-size: 14px; } .gifts-grid b { font-size: 15px; } }
 @media (max-width: 760px) { #rsvp .edit-kicker { transform: translate(-1.5%, -12px); } }
+@media (max-width: 760px) { .verse { padding-top: 6px !important; padding-bottom: 130px !important; } }
+/* gifts on phones: proportionate title, readable copy, tidy two-column bank details */
+@media (max-width: 760px) {
+  .gifts { padding: 70px 22px 76px; }
+  .gifts-title { font-size: clamp(30px, 8.6vw, 38px); line-height: 1.35; margin-bottom: 22px; white-space: nowrap; }
+  .gifts .edit-kicker { margin-bottom: 30px !important; }
+  .gifts-copy { font-size: 13.5px; line-height: 1.85; letter-spacing: .02em; margin-bottom: 30px; }
+  .gifts-bankname { font-size: 12px; margin-bottom: 20px; }
+  .gifts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 16px; max-width: 340px; text-align: center; }
+  .gifts-grid div { min-width: 0; align-items: center; }
+  .gifts-grid div:last-child { grid-column: 1 / -1; }
+  .gifts-grid span { font-size: 10px; letter-spacing: .16em; padding-left: .16em; }
+  .gifts-grid b { font-size: 14px; letter-spacing: .04em; }
+}
+@media (max-width: 760px) { #invite.ed-feature { min-height: max(100svh, 205vw) !important; } }
+/* swash letters pull script titles right, so nudge them left to look centred */
+.gifts-title { transform: translateX(-3%); }
+@media (max-width: 760px) { footer .script { transform: translateX(-4%); } }
+/* verse on phones: higher and smaller */
+@media (max-width: 760px) {
+  .verse { margin-top: -28px; padding-bottom: 134px !important; }
+  .verse-ar { font-size: clamp(32px, 9vw, 40px) !important; margin-bottom: 4px; }
+  .verse-en { font-size: clamp(14px, 4vw, 17px) !important; letter-spacing: .12em; margin-bottom: 12px !important; }
+  .verse-ref { font-size: 10px !important; }
+}
+@media (max-width: 760px) { .cel-row.flip .cel-h2 + p.cel-sub { transform: translateX(-3.5%); } }
+/* tighter hand-over from the RSVP to the gifts note */
+.gifts { padding-top: clamp(52px, 5.4vw, 80px); }
+@media (max-width: 760px) {
+  #rsvp .nr-split-paper.nr-rsvp { padding-bottom: 150px !important; }
+  .nr-rsvp::before { height: 140px !important; }
+  .gifts { padding-top: 48px; }
+}
 </style>
 </head>
 <body>
@@ -2179,18 +2212,28 @@ document.querySelectorAll('.ed-sub, .ed-script').forEach(el => io.observe(el));
     var svg = sec.querySelector('.cel-ribbon.rb-mob'); if (!svg) return;
     var W = sec.clientWidth, H = sec.clientHeight; if (!W || !H) return;
     var P = mob.map(function (q) { return [q[0] * W, q[1] * H]; });
-    /* phones: the ribbon finishes by sliding in behind the venue photo (the second photo) */
-    var ph = sec.querySelectorAll('.cel-media .photo')[1];
+    /* phones: a calm S-curve that stays in the side gutters, passes behind both photos and never crosses text */
+    var phs = sec.querySelectorAll('.cel-media .photo'), sr = sec.getBoundingClientRect();
     endFrac = 1;
-    if (ph) {
-      var pr = ph.getBoundingClientRect(), sr = sec.getBoundingClientRect();
-      var top = pr.top - sr.top, left = pr.left - sr.left, cy = top + pr.height * 0.42;
-      P = P.filter(function (q) { return q[1] < top - 150; });
-      P.push([W * 0.92, top - 80], [left + pr.width * 0.82, top + pr.height * 0.14], [left + pr.width * 0.5, cy]);
-      endFrac = Math.min(1, cy / H);
+    var dd = '';
+    if (phs.length > 1) {
+      var a = phs[0].getBoundingClientRect(), b = phs[1].getBoundingClientRect(), g = 11;
+      var L1 = a.left - sr.left, T1 = a.top - sr.top, w1 = a.width, h1 = a.height, R1 = L1 + w1, B1 = T1 + h1;
+      var L2 = b.left - sr.left, T2 = b.top - sr.top, w2 = b.width, h2 = b.height, R2 = L2 + w2;
+      /* one flowing S made only of curves: down the left from the A, behind photo 1 diagonally, out at its lower right,
+         curving past the right of the text and in behind photo 2 */
+      var f = function (n) { return n.toFixed(1); }, sx = W * 0.17;
+      var qx = L1 + 6, qy = T1 + h1 * 0.2;
+      var xx = R1 - 2, xy = B1 - 70, p2x = R1 - w1 * 0.2, p2y = B1 - 120;
+      var ex = L2 + w2 * 0.72, ey = T2 + h2 * 0.3;
+      dd = 'M' + f(sx) + ' 84'
+        + ' C-20 ' + f(84 + 0.45 * (qy - 84)) + ' -5 ' + f(qy - 40) + ' ' + f(qx) + ' ' + f(qy)
+        + ' C' + f(qx + w1 * 0.45) + ' ' + f(qy + 40) + ' ' + f(p2x) + ' ' + f(p2y) + ' ' + f(xx) + ' ' + f(xy)
+        + ' C' + f(xx + 0.8 * (xx - p2x)) + ' ' + f(xy + 0.8 * (xy - p2y)) + ' ' + f(W + 40) + ' ' + f(T2 - 30) + ' ' + f(ex) + ' ' + f(ey);
+      endFrac = Math.min(1, ey / H);
     }
-    var d = 'M' + P[0][0].toFixed(1) + ' ' + P[0][1].toFixed(1);
-    for (var i = 0; i < P.length - 1; i++) {
+    var d = dd || ('M' + P[0][0].toFixed(1) + ' ' + P[0][1].toFixed(1));
+    for (var i = 0; !dd && i < P.length - 1; i++) {
       var p0 = P[Math.max(i - 1, 0)], p1 = P[i], p2 = P[i + 1], p3 = P[Math.min(i + 2, P.length - 1)];
       d += ' C' + [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6, p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6, p2[0], p2[1]].map(function (v) { return v.toFixed(1); }).join(' ');
     }

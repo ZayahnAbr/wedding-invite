@@ -1859,6 +1859,9 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   .gifts { padding-top: 48px; }
 }
 @media (min-width: 761px) { .verse { margin-top: -30px; padding-bottom: clamp(100px, 11vw, 160px) !important; } }
+/* thank-you message: clear of the "By 15 November" line */
+#rsvp .thanks.show { margin-top: clamp(48px, 5vw, 72px); padding-top: 4px; position: relative; z-index: 1; text-align: center; }
+#rsvp .thanks p { line-height: 1.4 !important; margin: 0; }
 </style>
 </head>
 <body>
@@ -2165,7 +2168,7 @@ tick(); setInterval(tick, 1000);
 const form = document.getElementById('rsvp-form');
 form.addEventListener('submit', async e => {
   e.preventDefault();
-  const data = new FormData(form), first = data.get('entry.1035055887'), who = `${first} ${data.get('entry.1548000413')}`.trim();
+  const data = new FormData(form), first = String(data.get('entry.1035055887') || '').trim(), who = `${first} ${String(data.get('entry.1548000413') || '').trim()}`.trim();
   const btn = form.querySelector('button.send'), label = btn.textContent;
   btn.disabled = true; btn.textContent = 'Sending…';
   let sent = false;

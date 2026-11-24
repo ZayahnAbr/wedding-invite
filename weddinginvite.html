@@ -7,7 +7,7 @@
 <meta name="description" content="The wedding of Ammaarah Roshan and Nazier Ahmed Cassiem, Thursday, 17 December 2026, Cavalli Estate, Somerset West. Kindly RSVP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=Amiri:wght@400;700&family=Lateef:wght@200;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Marcellus&family=Amiri:wght@400;700&family=Lateef:wght@200;300&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
 /* ---------------------------------------------------------------
    FONTS
@@ -1928,6 +1928,13 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 .mc-or::before, .mc-or::after { content: ""; width: 34px; height: 1px; background: rgba(23,26,18,.35); }
 .mc-or { font-family: var(--jost) !important; font-size: 13px !important; letter-spacing: .3em; text-transform: uppercase; padding-left: .3em; color: #171a12 !important; margin: 14px 0 !important; }
 .mc-course h3 { font-weight: 400 !important; font-size: 15px !important; -webkit-text-stroke: .45px currentColor; }
+/* menu: delicate italic dish descriptions and note */
+.mc-dish { font-family: "Cormorant Garamond", "Times New Roman", serif !important; font-style: italic !important; font-weight: 400; font-size: 18px !important; line-height: 1.5 !important; letter-spacing: .01em !important; color: #2a2f22 !important; }
+.mc-note { font-family: "Cormorant Garamond", "Times New Roman", serif !important; font-style: italic !important; font-size: 16px !important; letter-spacing: .01em !important; text-transform: none !important; padding-left: 0 !important; line-height: 1.5 !important; color: #636957 !important; }
+@media (max-width: 760px) { .mc-dish { font-size: 17px !important; } .mc-note { font-size: 15px !important; } }
+/* sign-off from both families */
+#rsvp .menu-letter .ml-sign span { font-size: clamp(24px, 2.2vw, 32px) !important; }
+@media (max-width: 760px) { #rsvp .menu-letter .ml-sign span { white-space: normal !important; font-size: 28px !important; } }
 </style>
 </head>
 <body>
@@ -2113,7 +2120,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
       <p>We kindly request that your selections be submitted no later than Friday, 27 November 2026.</p>
       <p>We require separate selections for each guest in attendance, and so please ensure that each person in your admit is accounted for.</p>
       <p>We look forward to hosting you for an evening of fine dining and good company.</p>
-      <p class="ml-sign">With gratitude,<span>Ammaarah &amp; Nazier</span></p>
+      <p class="ml-sign">With gratitude,<span>Cassiem &amp; Roshan Families</span></p>
     </div>
     <a class="menu-jump" href="#menu">View the menu</a>
   </div>
@@ -2135,15 +2142,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
         <p class="mc-note">All mains to be served with a selection of seasonal sides curated by the chef</p>
       </div>
       <div class="mc-course">
-        <h3>Dessert</h3>
-        <p class="mc-dish">Silky white chocolate and coffee mousse with a crunch of milk chocolate nougatine</p>
-        <span class="mc-or">or</span>
-        <p class="mc-dish">Classic vanilla crème brûlée under a crackling caramel top, served with poppy seed tuile</p>
-        <span class="mc-or">or</span>
-        <p class="mc-dish">Zesty lemon tart with a vibrant raspberry sorbet</p>
-      </div>
-      <div class="mc-course">
-        <h3>Kids&rsquo; Main</h3>
+        <h3>Kids&rsquo; Mains</h3>
         <p class="mc-dish">Succulent beef patty in an artisanal homemade bun with crisp lettuce, tomato, onion and gherkin, served with French fries</p>
         <span class="mc-or">or</span>
         <p class="mc-dish">Golden free-range chicken goujons with a hot honey glaze, French fries and a garden-fresh house salad</p>
@@ -2151,6 +2150,14 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
         <p class="mc-dish">Catch-of-the-day in a crisp batter with golden chips and tangy house tartare</p>
         <span class="mc-or">or</span>
         <p class="mc-dish">Delicate linguine ribbons with a basil pesto, topped with shavings of aged parmesan</p>
+      </div>
+      <div class="mc-course">
+        <h3>Dessert</h3>
+        <p class="mc-dish">Silky white chocolate and coffee mousse with a crunch of milk chocolate nougatine</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Classic vanilla crème brûlée under a crackling caramel top, served with poppy seed tuile</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Zesty lemon tart with a vibrant raspberry sorbet</p>
       </div>
   </div>
 

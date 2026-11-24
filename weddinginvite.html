@@ -2363,7 +2363,7 @@ mform.addEventListener('submit', async e => {
   }
   mform.reset(); mform.style.display = 'none';
   mThanks.classList.add('show');
-  mThanks.querySelector('p').textContent = sent ? `Thank you, ${admit}. Your menu selections have been received.` : 'Your email app should now open with your selections. Please press send to complete them.';
+  mThanks.querySelector('p').textContent = sent ? `Thank you, ${admit}, your menu selections have been received.` : 'Your email app should now open with your selections. Please press send to complete them.';
 });
 // privacy: a fresh, empty form every time the page is shown (reload, back button, restored tab on a shared device)
 mFresh();

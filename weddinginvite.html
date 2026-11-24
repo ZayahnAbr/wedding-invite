@@ -1862,6 +1862,72 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 /* thank-you message: clear of the "By 15 November" line */
 #rsvp .thanks.show { margin-top: clamp(48px, 5vw, 72px); padding-top: 4px; position: relative; z-index: 1; text-align: center; }
 #rsvp .thanks p { line-height: 1.4 !important; margin: 0; }
+/* ===== menu letter, menu card and selection form ===== */
+#rsvp .menu-letter { max-width: 440px; margin: clamp(28px, 3vw, 40px) auto 0; text-align: left; position: relative; z-index: 1; }
+#rsvp .menu-letter p { font-family: var(--jost) !important; font-size: 15px !important; line-height: 1.85 !important; letter-spacing: .02em !important; text-transform: none !important; color: #171a12 !important; margin: 0 0 14px !important; }
+#rsvp .menu-letter .ml-dear { margin-bottom: 18px !important; }
+#rsvp .menu-letter .ml-sign { margin-top: 26px !important; }
+#rsvp .menu-letter .ml-sign span { display: block; font-family: var(--blosta); font-size: clamp(30px, 2.6vw, 38px); line-height: 1.5; margin-top: 4px; }
+#rsvp .menu-jump { display: inline-block; margin-top: 26px; font-family: var(--jost); font-size: 12px; letter-spacing: .26em; padding: 0 0 5px .26em; text-transform: uppercase; color: #171a12; text-decoration: none; border-bottom: 1px solid currentColor; position: relative; z-index: 1; }
+.menu-sec { background: #fbfaf6; color: #171a12; text-align: center; padding: clamp(70px, 8vw, 120px) 24px clamp(70px, 8vw, 110px); }
+.menu-title { font-family: var(--blosta); font-weight: 400; font-size: clamp(46px, 4.5vw, 62px); line-height: 1.3; margin: 0 0 clamp(26px, 3vw, 40px); transform: translateX(-2%); }
+.menu-card { max-width: 620px; margin: 0 auto; padding: clamp(34px, 4vw, 54px) clamp(22px, 4vw, 56px); border: 1px solid rgba(99,105,87,.35); outline: 1px solid rgba(99,105,87,.2); outline-offset: 6px; background: #fff; }
+.mc-course + .mc-course { margin-top: clamp(34px, 4vw, 48px); }
+.mc-course h3 { font-family: var(--jost); font-weight: 400; font-size: 14px; letter-spacing: .34em; padding-left: .34em; text-transform: uppercase; color: #171a12; margin: 0 0 18px; }
+.mc-dish { font-family: var(--jost); font-size: 15px; line-height: 1.7; letter-spacing: .02em; max-width: 440px; margin: 0 auto; color: #171a12; }
+.mc-or { display: block; font-family: var(--blosta); font-size: 26px; line-height: 1.2; color: var(--g-sage); margin: 8px 0; }
+.mc-note { font-family: var(--jost); font-size: 11px; letter-spacing: .2em; padding-left: .2em; text-transform: uppercase; line-height: 1.8; color: var(--g-sage); max-width: 380px; margin: 22px auto 0; }
+#menu-form { max-width: 560px; margin: clamp(56px, 6vw, 84px) auto 0; text-align: left; }
+.mf-title { font-family: var(--blosta); font-weight: 400; font-size: clamp(38px, 3.6vw, 50px); line-height: 1.3; text-align: center; margin: 0 0 6px; }
+.mf-lead { font-family: var(--jost); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; text-align: center; color: var(--g-sage); line-height: 1.8; margin: 0 0 30px; }
+.mf-field { display: flex; flex-direction: column; gap: 8px; margin: 0 0 22px; }
+.mf-field label { font-family: var(--jost); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: #171a12; }
+.mf-field input, .mf-field textarea { font-family: var(--jost); font-size: 17px; color: #171a12; background: transparent; border: 0; border-bottom: 1px solid rgba(23,26,18,.4); border-radius: 0; padding: 8px 2px; outline: none; resize: vertical; }
+.mf-field input:focus, .mf-field textarea:focus { border-bottom-color: #171a12; }
+.g-card { border: 1px solid rgba(99,105,87,.35); padding: 22px clamp(16px, 3vw, 28px) 8px; margin: 0 0 22px; background: #fff; min-width: 0; }
+.g-card legend { display: flex; align-items: center; gap: 16px; padding: 0 10px; margin-left: -10px; }
+.g-num { font-family: var(--blosta); font-size: 30px; line-height: 1.2; }
+.g-remove { font-family: var(--jost); font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--g-sage); background: none; border: 0; border-bottom: 1px solid currentColor; padding: 0 0 2px; cursor: pointer; }
+.g-remove[hidden] { display: none; }
+.g-type { display: flex; gap: 10px; margin: 4px 0 22px; }
+.g-pill { flex: 1; cursor: pointer; position: relative; }
+.g-pill input, .g-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.g-pill span { display: block; text-align: center; font-family: var(--jost); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; padding: 13px 8px; border: 1px solid rgba(23,26,18,.45); color: #171a12; transition: background .25s, color .25s; }
+.g-pill input:checked + span { background: #171a12; border-color: #171a12; color: #fbfaf6; }
+.g-adult[hidden], .g-kid[hidden] { display: none; }
+.g-label { font-family: var(--jost); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: #171a12; margin: 6px 0 10px; }
+.g-opt { display: block; position: relative; cursor: pointer; margin: 0 0 8px; }
+.g-opt span { display: block; font-family: var(--jost); font-size: 14px; line-height: 1.6; color: #171a12; padding: 11px 14px 11px 40px; border: 1px solid rgba(99,105,87,.3); transition: border-color .25s, background .25s; }
+.g-opt span::before { content: ""; position: absolute; left: 14px; top: 15px; width: 13px; height: 13px; border-radius: 50%; border: 1px solid rgba(23,26,18,.55); }
+.g-opt input:checked + span { border-color: #171a12; background: #f4f0e7; }
+.g-opt input:checked + span::after { content: ""; position: absolute; left: 18px; top: 19px; width: 7px; height: 7px; border-radius: 50%; background: #171a12; }
+.g-opt input:focus-visible + span, .g-pill input:focus-visible + span { outline: 2px solid var(--g-sage); outline-offset: 2px; }
+.g-adult .g-opt:last-of-type, .g-kid .g-opt:last-of-type { margin-bottom: 18px; }
+.mf-add { display: block; margin: 0 auto 26px; font-family: var(--jost); font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: #171a12; background: none; border: 0; border-bottom: 1px solid currentColor; padding: 0 0 4px; cursor: pointer; }
+.mf-error { font-family: var(--jost); font-size: 13px; color: #8a3a2a; text-align: center; margin: 0 0 14px; }
+.mf-error[hidden] { display: none; }
+.mf-send { display: block; width: 100%; font-family: var(--jost); font-size: 13px; letter-spacing: .26em; text-transform: uppercase; padding: 17px; background: #171a12; color: #fbfaf6; border: 1px solid #171a12; cursor: pointer; }
+.mf-send:disabled { opacity: .6; cursor: default; }
+.mf-thanks.show { margin: clamp(56px, 6vw, 84px) auto 0; max-width: 560px; }
+.mf-thanks p { font-family: var(--blosta); font-size: clamp(30px, 3vw, 40px); line-height: 1.4; color: #171a12; margin: 0; }
+@media (max-width: 760px) {
+  #rsvp .menu-letter p { font-size: 14.5px !important; }
+  .menu-card { outline-offset: 4px; }
+  .mc-dish { font-size: 14px; }
+  .menu-title, .mf-title { transform: translateX(-3%); }
+}
+/* letter: names on one line, a clearer "View the menu" button */
+#rsvp .menu-letter .ml-sign span { white-space: nowrap; font-size: clamp(28px, 2.6vw, 38px); }
+#rsvp .menu-jump { margin-top: 30px; padding: 15px 30px 15px calc(30px + .26em); font-size: 13px; color: #fbfaf6 !important; background: #171a12; border: 1px solid #171a12; transition: background .25s, color .25s; }
+#rsvp .menu-jump:hover, #rsvp .menu-jump:focus-visible { background: #636957; border-color: #636957; color: #fbfaf6 !important; }
+/* letter body justified; greeting and sign-off stay left */
+#rsvp .menu-letter p { text-align: justify !important; text-justify: inter-word; -webkit-hyphens: none !important; hyphens: none !important; overflow-wrap: normal; word-break: normal; }
+#rsvp .menu-letter .ml-dear, #rsvp .menu-letter .ml-sign { text-align: left !important; }
+/* clearer "or" between dishes: darker, larger, framed by short rules */
+.mc-or { display: flex !important; align-items: center; justify-content: center; gap: 14px; font-size: 32px !important; line-height: 1.3 !important; color: #3a4030 !important; margin: 10px 0 !important; }
+.mc-or::before, .mc-or::after { content: ""; width: 34px; height: 1px; background: rgba(23,26,18,.35); }
+.mc-or { font-family: var(--jost) !important; font-size: 13px !important; letter-spacing: .3em; text-transform: uppercase; padding-left: .3em; color: #171a12 !important; margin: 14px 0 !important; }
+.mc-course h3 { font-weight: 400 !important; font-size: 15px !important; -webkit-text-stroke: .45px currentColor; }
 </style>
 </head>
 <body>
@@ -1904,7 +1970,7 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
   <a class="caps" href="#invite">Invitation</a>
   <a class="caps" href="#details">Details</a>
   <a class="caps" href="#schedule">Schedule</a>
-  <a class="caps" href="#rsvp">RSVP</a>
+  <a class="caps" href="#rsvp">Menu</a>
 </nav>
 
 <!-- HERO -->
@@ -2035,47 +2101,98 @@ footer { padding: clamp(30px, 3.4vw, 44px) 16px clamp(26px, 3vw, 38px) !importan
 
 <div class="seam" aria-hidden="true"><span class="seam-badge"><img src="monogram.png" alt=""></span></div>
 
-<!-- RSVP: paper panel with form | olive panel with framed photo -->
+<!-- MENU: the guest letter beside the photo, then the menu and the selection form -->
 <section class="nr-split reverse" id="rsvp">
   <div class="nr-split-paper nr-rsvp">
-    <div class="edit-kicker"><span class="n">03</span>RSVP</div>
-    <h2 class="nr-caps">Kindly Reply</h2>
-    <p class="nr-small">By 15 November 2026</p>
-
-    <!-- Replies are saved to the Google Form behind data-gform (and appear in its linked Sheet).
-         If sending fails, the guest's email app opens with the reply pre-filled instead. -->
-    <form id="rsvp-form" autocomplete="off" data-gform="https://docs.google.com/forms/d/e/1FAIpQLSfQu5HTE6d_NioMop0atSg9x6mqeEKIfWwXcDMcIPn5hqBXGA/formResponse" data-email="zayahnabrahams2004@gmail.com">
-      <div class="two">
-        <div class="field"><label for="first">First name</label><input id="first" name="entry.1035055887" data-label="First name" required autocomplete="off"></div>
-        <div class="field"><label for="surname">Surname</label><input id="surname" name="entry.1548000413" data-label="Surname" required autocomplete="off"></div>
-      </div>
-      <div class="choice">
-        <input type="radio" name="entry.1135446806" data-label="Attending" id="yes" value="Joyfully accepts" required><label for="yes">Joyfully accepts</label>
-        <input type="radio" name="entry.1135446806" data-label="Attending" id="no" value="Regretfully declines"><label for="no">Regretfully declines</label>
-      </div>
-      <div class="two">
-        <div class="field"><label for="guests">Number of guests</label>
-          <select id="guests" name="entry.231481461" data-label="Number of guests"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
-        <div class="field"><label for="phone">Phone</label><input id="phone" name="entry.1337212066" data-label="Phone" type="tel" required autocomplete="off"></div>
-      </div>
-      <div class="field"><label for="note">A note for the couple</label><textarea id="note" name="entry.374926177" data-label="A note for the couple"></textarea></div>
-      <button class="send nr-btn" type="submit">Send reply</button>
-    </form>
-    <div class="thanks" id="thanks">
-      <p>Thank you, your reply has been received.</p>
+    <h2 class="nr-caps">Menu Selection</h2>
+    <div class="menu-letter">
+      <p class="ml-dear">Dear Guest,</p>
+      <p>We are pleased to confirm your RSVP and are honoured that you will be joining us to celebrate our special day.</p>
+      <p>As hosts, we have engaged a private chef to curate a bespoke fine dining experience for the enjoyment of our guests.</p>
+      <p>We would be grateful if you could indicate your menu selections in advance, to enable the chef to prepare accordingly.</p>
+      <p>We kindly request that your selections be submitted no later than Friday, 27 November 2026.</p>
+      <p>We require separate selections for each guest in attendance, and so please ensure that each person in your admit is accounted for.</p>
+      <p>We look forward to hosting you for an evening of fine dining and good company.</p>
+      <p class="ml-sign">With gratitude,<span>Ammaarah &amp; Nazier</span></p>
     </div>
-
-    <div class="wa-rsvp">
-      <p class="wa-lead">Alternatively, RSVP via WhatsApp</p>
-      <div class="wa-list">
-        <a href="https://wa.me/27799274396?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Ammaarah Roshan</span><b>079 927 4396</b></a>
-        <a href="https://wa.me/27766597846?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Rihana Roshan, mother of the bride</span><b>076 659 7846</b></a>
-        <a href="https://wa.me/27825776465?text=Hello, I would like to RSVP to Ammaarah and Nazier%27s wedding on Thursday, 17 December 2026." target="_blank" rel="noopener"><span>Rehana Cassiem, mother of the groom</span><b>082 577 6465</b></a>
-      </div>
-    </div>
-
+    <a class="menu-jump" href="#menu">View the menu</a>
   </div>
   <div class="rsvp-photo photo"><img src="photos/more-4.jpg" alt="Ammaarah and Nazier under the lamppost"></div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <h2 class="menu-title">The Menu</h2>
+  <div class="menu-card">
+      <div class="mc-course">
+        <h3>Mains</h3>
+        <p class="mc-dish">Prime fillet of beef with pommes Anna, sun-ripened vine tomatoes, and a rich jus</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Tender chicken breast with sweet butternut, buttery cream and a delicate kale crisp</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">The day&#x27;s finest line catch, paired with corn and a velvety coconut and lemongrass velouté</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Aromatic green curry with silken tofu, marrow and curry leaf, served with crisp poppadums (V)</p>
+        <p class="mc-note">All mains to be served with a selection of seasonal sides curated by the chef</p>
+      </div>
+      <div class="mc-course">
+        <h3>Dessert</h3>
+        <p class="mc-dish">Silky white chocolate and coffee mousse with a crunch of milk chocolate nougatine</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Classic vanilla crème brûlée under a crackling caramel top, served with poppy seed tuile</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Zesty lemon tart with a vibrant raspberry sorbet</p>
+      </div>
+      <div class="mc-course">
+        <h3>Kids&rsquo; Main</h3>
+        <p class="mc-dish">Succulent beef patty in an artisanal homemade bun with crisp lettuce, tomato, onion and gherkin, served with French fries</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Golden free-range chicken goujons with a hot honey glaze, French fries and a garden-fresh house salad</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Catch-of-the-day in a crisp batter with golden chips and tangy house tartare</p>
+        <span class="mc-or">or</span>
+        <p class="mc-dish">Delicate linguine ribbons with a basil pesto, topped with shavings of aged parmesan</p>
+      </div>
+  </div>
+
+  <!-- Each guest is sent to the menu Google Form as its own response (Adult -> Adult Menu page, Child -> Kids Menu page).
+       If sending fails, the guest's email app opens with the selections pre-filled instead. -->
+  <form id="menu-form" autocomplete="off" novalidate data-gform="https://docs.google.com/forms/d/e/1FAIpQLSdrj4R8nd6ka9lQBEclW9r4UD4zPSSGXu4Xri2r04j9XhQIRQ/formResponse" data-email="zayahnabrahams2004@gmail.com">
+    <h3 class="mf-title">Your Selections</h3>
+    <p class="mf-lead">Please complete one selection for each guest in your admit</p>
+    <div class="mf-field"><label for="mf-admit">Name on the RSVP</label><input id="mf-admit" required pattern=".*\S.*" autocomplete="off"></div>
+    <div id="mf-guests"></div>
+    <button type="button" class="mf-add">+ Add another guest</button>
+    <p class="mf-error" id="mf-error" hidden>Please complete every guest&rsquo;s name and selections.</p>
+    <button class="send nr-btn mf-send" type="submit">Submit selections</button>
+  </form>
+  <div class="thanks mf-thanks" id="menu-thanks"><p>Thank you, your selections have been received.</p></div>
+
+  <template id="guest-tpl">
+    <fieldset class="g-card">
+      <legend><span class="g-num">Guest</span><button type="button" class="g-remove" aria-label="Remove this guest">Remove</button></legend>
+      <div class="mf-field"><label for="g-name-__i__">Guest name</label><input id="g-name-__i__" class="g-name" required pattern=".*\S.*" autocomplete="off"></div>
+      <div class="g-type"><label class="g-pill"><input type="radio" name="type-__i__" value="Adult" required><span>Adult</span></label><label class="g-pill"><input type="radio" name="type-__i__" value="Child"><span>Child</span></label></div>
+      <div class="g-adult" hidden>
+        <p class="g-label">Main</p>
+        <label class="g-opt"><input type="radio" name="main-__i__" value="Prime fillet of beef with pommes Anna, sun-ripened vine tomatoes, and a rich jus" required><span>Prime fillet of beef with pommes Anna, sun-ripened vine tomatoes, and a rich jus</span></label>
+        <label class="g-opt"><input type="radio" name="main-__i__" value="Tender chicken breast with sweet butternut, buttery cream and a delicate kale crisp"><span>Tender chicken breast with sweet butternut, buttery cream and a delicate kale crisp</span></label>
+        <label class="g-opt"><input type="radio" name="main-__i__" value="The day&#x27;s finest line catch, paired with corn and a velvety coconut and lemongrass velouté"><span>The day&#x27;s finest line catch, paired with corn and a velvety coconut and lemongrass velouté</span></label>
+        <label class="g-opt"><input type="radio" name="main-__i__" value="Aromatic green curry with silken tofu, marrow and curry leaf, served with crisp poppadums (V)"><span>Aromatic green curry with silken tofu, marrow and curry leaf, served with crisp poppadums (V)</span></label>
+        <p class="g-label">Dessert</p>
+        <label class="g-opt"><input type="radio" name="dessert-__i__" value="Silky white chocolate and coffee mousse with a crunch of milk chocolate nougatine" required><span>Silky white chocolate and coffee mousse with a crunch of milk chocolate nougatine</span></label>
+        <label class="g-opt"><input type="radio" name="dessert-__i__" value="Classic vanilla crème brûlée under a crackling caramel top, served with poppy seed tuile"><span>Classic vanilla crème brûlée under a crackling caramel top, served with poppy seed tuile</span></label>
+        <label class="g-opt"><input type="radio" name="dessert-__i__" value="Zesty lemon tart with a vibrant raspberry sorbet"><span>Zesty lemon tart with a vibrant raspberry sorbet</span></label>
+      </div>
+      <div class="g-kid" hidden>
+        <p class="g-label">Kids&rsquo; main</p>
+        <label class="g-opt"><input type="radio" name="kids-__i__" value="Succulent beef patty in an artisanal homemade bun with crisp lettuce, tomato, onion and gherkin, served with French fries" required><span>Succulent beef patty in an artisanal homemade bun with crisp lettuce, tomato, onion and gherkin, served with French fries</span></label>
+        <label class="g-opt"><input type="radio" name="kids-__i__" value="Golden free-range chicken goujons with a hot honey glaze, French fries and a garden-fresh house salad"><span>Golden free-range chicken goujons with a hot honey glaze, French fries and a garden-fresh house salad</span></label>
+        <label class="g-opt"><input type="radio" name="kids-__i__" value="Catch-of-the-day in a crisp batter with golden chips and tangy house tartare"><span>Catch-of-the-day in a crisp batter with golden chips and tangy house tartare</span></label>
+        <label class="g-opt"><input type="radio" name="kids-__i__" value="Delicate linguine ribbons with a basil pesto, topped with shavings of aged parmesan"><span>Delicate linguine ribbons with a basil pesto, topped with shavings of aged parmesan</span></label>
+      </div>
+      <div class="mf-field"><label for="g-diet-__i__">Dietary requirements or allergies</label><textarea id="g-diet-__i__" class="g-diet" rows="2"></textarea></div>
+    </fieldset>
+  </template>
 </section>
 
 <!-- GIFTS: a note on gifts, in fine print -->
@@ -2163,41 +2280,79 @@ function tick() {
 }
 tick(); setInterval(tick, 1000);
 
-// RSVP: posts straight into the Google Form (the browser cannot read Google's reply, so a send that
-// did not throw is treated as sent); the email app opens as a fallback if the request fails
-const form = document.getElementById('rsvp-form');
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  const data = new FormData(form), first = String(data.get('entry.1035055887') || '').trim(), who = `${first} ${String(data.get('entry.1548000413') || '').trim()}`.trim();
-  const btn = form.querySelector('button.send'), label = btn.textContent;
-  btn.disabled = true; btn.textContent = 'Sending…';
-  let sent = false;
-  try {
-    await fetch(form.dataset.gform, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(data) });
-    sent = true;
-  } catch (err) {}
-  if (!sent) {
-    const body = [...form.querySelectorAll('[data-label]')].filter(el => el.type !== 'radio' || el.checked)
-      .map(el => `${el.dataset.label}: ${el.value}`).join('\n');
-    location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent('RSVP - ' + who)}&body=${encodeURIComponent(body)}`;
-  }
-  form.reset();
-  form.style.display = 'none';
-  const th = document.getElementById('thanks'); th.classList.add('show');
-  th.querySelector('p').textContent = sent ? `Thank you, ${first}. Your reply has been received.` : 'Your email app should now open with your reply. Please press send to complete your RSVP.';
-});
-
-// privacy: a fresh, empty form every time the page is shown (reload, back button, restored tab on a shared device)
-function freshRsvp() {
-  form.reset();
-  form.style.display = '';
-  const th = document.getElementById('thanks');
-  th.classList.remove('show');
-  th.querySelector('p').textContent = 'Thank you, your reply has been received.';
-  const b = form.querySelector('button.send'); b.disabled = false; b.textContent = 'Send reply';
+// MENU: one Google Form response per guest. Adults go through the Adult Menu page, children through the Kids Menu page.
+// The browser cannot read Google's reply, so a send that did not throw is treated as sent; email is the fallback.
+const mform = document.getElementById('menu-form');
+const mGuests = document.getElementById('mf-guests');
+const mTpl = document.getElementById('guest-tpl').innerHTML;
+const mThanks = document.getElementById('menu-thanks');
+const mErr = document.getElementById('mf-error');
+let mNext = 0;
+function mSync(card) {
+  const t = card.querySelector('[name^="type-"]:checked');
+  const adult = !!t && t.value === 'Adult', kid = !!t && t.value === 'Child';
+  const a = card.querySelector('.g-adult'), k = card.querySelector('.g-kid');
+  a.hidden = !adult; k.hidden = !kid;
+  a.querySelectorAll('input').forEach(i => i.disabled = !adult);
+  k.querySelectorAll('input').forEach(i => i.disabled = !kid);
 }
-freshRsvp();
-window.addEventListener('pageshow', freshRsvp);
+function mNumber() {
+  const cards = mGuests.querySelectorAll('.g-card');
+  cards.forEach((c, n) => { c.querySelector('.g-num').textContent = 'Guest ' + (n + 1); c.querySelector('.g-remove').hidden = cards.length === 1; });
+}
+function mAdd() {
+  const box = document.createElement('div');
+  box.innerHTML = mTpl.replace(/__i__/g, mNext++);
+  const card = box.firstElementChild;
+  card.addEventListener('change', () => mSync(card));
+  card.querySelector('.g-remove').addEventListener('click', () => { card.remove(); mNumber(); });
+  mGuests.appendChild(card); mSync(card); mNumber();
+  return card;
+}
+document.querySelector('.mf-add').addEventListener('click', () => { mAdd().querySelector('.g-name').focus(); });
+function mFresh() {
+  mform.reset(); mGuests.innerHTML = ''; mNext = 0; mAdd();
+  mform.style.display = ''; mThanks.classList.remove('show'); mErr.hidden = true;
+  const b = mform.querySelector('.mf-send'); b.disabled = false; b.textContent = 'Submit selections';
+}
+mform.addEventListener('submit', async e => {
+  e.preventDefault();
+  if (!mform.checkValidity()) { mErr.hidden = false; mform.reportValidity(); return; }
+  mErr.hidden = true;
+  const admit = document.getElementById('mf-admit').value.trim();
+  const people = [...mGuests.querySelectorAll('.g-card')].map(c => {
+    const v = s => { const el = c.querySelector(s); return el ? el.value.trim() : ''; };
+    return { name: v('.g-name'), diet: v('.g-diet'), type: v('[name^="type-"]:checked'),
+      main: v('[name^="main-"]:checked'), dessert: v('[name^="dessert-"]:checked'), kids: v('[name^="kids-"]:checked') };
+  });
+  const btn = mform.querySelector('.mf-send');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  let sent = true;
+  for (const p of people) {
+    const body = new URLSearchParams();
+    body.append('entry.267255898', p.name);
+    body.append('entry.1243479808', admit);
+    body.append('entry.408357506', p.diet);
+    body.append('entry.1359120456', p.type);
+    if (p.type === 'Adult') { body.append('entry.215455614', p.main); body.append('entry.1630942226', p.dessert); body.append('pageHistory', '0,1'); }
+    else { body.append('entry.440618535', p.kids); body.append('pageHistory', '0,2'); }
+    body.append('fvv', '1');
+    try { await fetch(mform.dataset.gform, { method: 'POST', mode: 'no-cors', body }); } catch (err) { sent = false; }
+  }
+  if (!sent) {
+    const text = 'Name on the RSVP: ' + admit + '\n\n' + people.map((p, n) => [
+      'Guest ' + (n + 1) + ': ' + p.name + ' (' + p.type + ')',
+      p.type === 'Adult' ? 'Main: ' + p.main + '\nDessert: ' + p.dessert : 'Kids main: ' + p.kids,
+      'Dietary: ' + (p.diet || 'none')].join('\n')).join('\n\n');
+    location.href = `mailto:${mform.dataset.email}?subject=${encodeURIComponent('Menu selections - ' + admit)}&body=${encodeURIComponent(text)}`;
+  }
+  mform.reset(); mform.style.display = 'none';
+  mThanks.classList.add('show');
+  mThanks.querySelector('p').textContent = sent ? `Thank you, ${admit}. Your menu selections have been received.` : 'Your email app should now open with your selections. Please press send to complete them.';
+});
+// privacy: a fresh, empty form every time the page is shown (reload, back button, restored tab on a shared device)
+mFresh();
+window.addEventListener('pageshow', mFresh);
 
 // detail tabs
 document.querySelectorAll('.ed-tabs [role=tab]').forEach(tab => tab.addEventListener('click', () => {
